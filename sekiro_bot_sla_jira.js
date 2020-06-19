@@ -1,7 +1,7 @@
 /* SEKIRO - SLA BOT */
 
 //Webhook criado no grupo do hangout
-const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAjcNar6Y/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=3mwQKtsTprlWNYhtF-PSH_CuCxxP6bsefTlW0si1RwE%3D';
+const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=zLEsFddu18maBSMXmry1_YVw3_gL73HQj764KEZ1HQc%3D';
 const fetch = require('node-fetch');
 const date = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo'});
 const jiraAPI = 'https://bmsixcloud.atlassian.net/rest/api/3/search';
