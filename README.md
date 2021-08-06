@@ -22,7 +22,7 @@ Este projeto tem como objetivo a construção de um BOT que verifica os SLA de P
 - clone o repositório seguindo os comandos abaixo ou baixe o pacote da aplicação dentro de uma pasta com o nome `sekiro_bot_sla`, anote o caminho para depois referenciar dentro do arquivo `sekiro_bot.sh`
 ```sh
 $ cd workspace
-$ git clone URL do Repositorio
+$ git clone //URL do Repositorio
 $ cd sekiro_bot_sla
 ```
 - instale o nodejs e as dependências se ainda não tiver instalado
