@@ -16,7 +16,7 @@
  */
 // [START hangouts_chat_node_webhook]
 const fetch = require('node-fetch');
-const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?key=';
+const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?key='; // INFORME O CAMINHO DO WEBHOOK
 const data = JSON.stringify({
   'text': 'BOT SLA - Teste Fabricio',
 });
