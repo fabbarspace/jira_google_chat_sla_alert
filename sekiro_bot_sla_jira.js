@@ -5,7 +5,7 @@ const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?k
 const fetch = require('node-fetch');
 const date = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo'});
 const jiraAPI = 'https://bmsixcloud.atlassian.net/rest/api/3/search';
-const jiraAuthorization = ''; //Gere um novo token authorization no Jira
+const jiraAuthorization = 'bm9jLmJvdEBibXNpeC5jb206ZFFhM3FDWlBlZmVoU3BuZWl1Y3MyREIw';
 
 //Define a busca para SLA de Primeira Resposta
 const jiraSearchFirstResponse = `{
