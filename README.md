@@ -19,10 +19,10 @@ Este projeto tem como objetivo a construção de um BOT que verifica os SLA de P
 
 ### Instalação e configuração
 
-- clone o repositório 
+- clone o repositório seguindo os comandos abaixo ou baixe o pacote da aplicação dentro de uma pasta com o nome `sekiro_bot_sla`, anote o caminho para depois referenciar dentro do arquivo `sekiro_bot.sh`
 ```sh
 $ cd workspace
-$ git clone 
+$ git clone //URL do Repositorio
 $ cd sekiro_bot_sla
 ```
 - instale o nodejs e as dependências se ainda não tiver instalado
@@ -34,7 +34,9 @@ $ npm install node-fetch --save
 - Pronto !
 
 ### Como configurar no servidor ubuntu para rodar automaticamente
-- Não se esqueça que a instalação e configuração de dependências deve ser feita no servidor também
+- Não se esqueça que a instalação e configuração de dependências deve ser feita no servidor também. O caminho dentro do arquivo `sekiro_bot.sh` deve ser alterado.
+
+- Um token para acesso a API deve ser gerado no Jira e informado no campo `jiraAuthorization` em `sekiro_bot_sla_jira.js` para que a aplicação tenha acesso ao Jira.
 
 - Para que o programa rode a cada x minutos, vamos usar o arquivo `sekiro_bot.sh`, esse arquivo chama o programa `sekiro_bot_sla_jira.js` que faz a checagem de SLA via node. Dessa forma fica mais fácil incluir o arquivo `.sh` no crontab do Ubuntu. Ele também vai gerar um arquivo de log local.
 
