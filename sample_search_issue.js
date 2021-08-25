@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 fetch('https://bmsixcloud.atlassian.net/rest/api/3/search?jql=project=SEAD+AND+updated>=startOfDay(-1d)+AND+resolution=Unresolved', {
   method: 'GET',
   headers: {
-    'Authorization': `Basic bm9jLm`, //INFORME o AUTH TOKEN
+    'Authorization': `Basic bm9jLmJvdEBibXNpeC5jb206ZFFhM3FDWlBlZmVoU3BuZWl1Y3MyREIw`,
     'Accept': 'application/json'
   }
 })
