@@ -1,9 +1,9 @@
 /* METODO GET */
 const fetch = require('node-fetch');
-fetch('https://bmsixcloud.atlassian.net/rest/api/3/search?jql=project=SEAD+AND+updated>=startOfDay(-1d)+AND+resolution=Unresolved', {
+fetch('https://org_name.atlassian.net/rest/api/3/search?jql=project=project_name+AND+updated>=startOfDay(-1d)+AND+resolution=Unresolved', {
   method: 'GET',
   headers: {
-    'Authorization': `Basic bm9jLmJvdEBibXNpeC5jb206ZFFhM3FDWlBlZmVoU3BuZWl1Y3MyREIw`,
+    'Authorization': `Basic key`,
     'Accept': 'application/json'
   }
 })
@@ -20,7 +20,7 @@ fetch('https://bmsixcloud.atlassian.net/rest/api/3/search?jql=project=SEAD+AND+u
 /* METODO POST */
 const fetch = require('node-fetch');
 const bodyData = `{
-    "jql": "project = SEAD \
+    "jql": "project = project_name \
     AND resolution = Unresolved \
     AND issuetype in (Incident, 'Service Request', 'Service Request with Approvals') \
     AND status in (Escalated, 'In Progress', Open, Pending, 'Under investigation', 'Waiting for support', 'Work in progress') \
@@ -36,10 +36,10 @@ const bodyData = `{
     "startAt": 0
   }`;
 
-fetch('https://bmsixcloud.atlassian.net/rest/api/3/search', {
+fetch('https://org_name.atlassian.net/rest/api/3/search', {
   method: 'POST',
   headers: {
-    'Authorization': `Basic bm9jLmJvdEBibXNpeC5jb206ZFFhM3FDWlBlZmVoU3BuZWl1Y3MyREIw`,
+    'Authorization': `Basic key`,
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   },
