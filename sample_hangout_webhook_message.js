@@ -16,9 +16,9 @@
  */
 // [START hangouts_chat_node_webhook]
 const fetch = require('node-fetch');
-const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=zLEsFddu18maBSMXmry1_YVw3_gL73HQj764KEZ1HQc%3D';
+const webhookURL = 'URL';
 const data = JSON.stringify({
-  'text': 'BOT SLA - Teste Fabricio',
+  'text': 'BOT SLA - Teste',
 });
 
 fetch(webhookURL, {
@@ -48,9 +48,9 @@ fetch(webhookURL, {
  */
 // [START hangouts_chat_node_webhook]
 const fetch = require('node-fetch');
-const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=zLEsFddu18maBSMXmry1_YVw3_gL73HQj764KEZ1HQc%3D';
+const webhookURL = 'URL';
 const data = JSON.stringify({
-  'text': 'BOT SLA - Teste Fabricio',
+  'text': 'BOT SLA - Teste',
 });
 
 fetch(webhookURL, {
