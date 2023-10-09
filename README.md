@@ -1,29 +1,22 @@
-# SEKIRO - BOT SLA
+# Alerta de SLA de chamados do Jira no Google Chat
 
 ### Propósito
-Este projeto tem como objetivo a construção de um BOT que verifica os SLA de Primeiro Atendimento e Resolução nas ferramentas ITSM e avisa o grupo de operadores se algum SLA de chamados esta prestes a vencer.
-
-### Roadmap
-- Integração com ServiceNow
-- Integração com Jira C4
-
-### Suporte
-- Jira BMSIX
+Este projeto tem como objetivo a construção de um BOT que verifica os SLA de Primeiro Atendimento e Resolução no Jira e avisa o grupo de operadores no Google Chat se algum SLA esta prestes a vencer.
 
 ### Requerimentos em ambiente Ubuntu
-| Packages | Info | Referência |
-| ------ | ------ | ------ |
-| NodeJS |  |  |
-| NPM |  |  |
-| node-fetch | Pacote NPM |  |
+| Packages |
+| ------ | 
+| NodeJS | 
+| NPM |  
+| node-fetch 
 
 ### Instalação e configuração
 
-- clone o repositório seguindo os comandos abaixo ou baixe o pacote da aplicação dentro de uma pasta com o nome `sekiro_bot_sla`, anote o caminho para depois referenciar dentro do arquivo `sekiro_bot.sh`
+- clone o repositório seguindo os comandos abaixo ou baixe o pacote da aplicação dentro de uma pasta com o nome `jira_google_chat_sla_alert`, anote o caminho para depois referenciar dentro do arquivo `bot.sh`
 ```sh
 $ cd workspace
 $ git clone //URL do Repositorio
-$ cd sekiro_bot_sla
+$ cd jira_google_chat_sla_alert
 ```
 - instale o nodejs e as dependências se ainda não tiver instalado
 ```sh
@@ -34,11 +27,11 @@ $ npm install node-fetch --save
 - Pronto !
 
 ### Como configurar no servidor ubuntu para rodar automaticamente
-- Não se esqueça que a instalação e configuração de dependências deve ser feita no servidor também. O caminho dentro do arquivo `sekiro_bot.sh` deve ser alterado.
+- Não se esqueça que a instalação e configuração de dependências deve ser feita no servidor também. O caminho dentro do arquivo `bot.sh` deve ser alterado.
 
 - Um token para acesso a API deve ser gerado no Jira e informado no campo `jiraAuthorization` em `sekiro_bot_sla_jira.js` para que a aplicação tenha acesso ao Jira.
 
-- Para que o programa rode a cada x minutos, vamos usar o arquivo `sekiro_bot.sh`, esse arquivo chama o programa `sekiro_bot_sla_jira.js` que faz a checagem de SLA via node. Dessa forma fica mais fácil incluir o arquivo `.sh` no crontab do Ubuntu. Ele também vai gerar um arquivo de log local.
+- Para que o programa rode a cada x minutos, vamos usar o arquivo `bot.sh`, esse arquivo chama o programa `sekiro_bot_sla_jira.js` que faz a checagem de SLA. Dessa forma fica mais fácil incluir o arquivo `.sh` no crontab do Ubuntu. Ele também vai gerar um arquivo de log local.
 
 - No crontab do Ubuntu, editamos com o seguinte comando
 ```sh
@@ -69,7 +62,7 @@ crontab -e
 # For more information see the manual pages of crontab(5) and cron(8)
 #
 # m h  dom mon dow   command
-*/7 * * * * /home/fabriciobar/sekiro_bot_sla/sekiro_bot.sh
+*/7 * * * * /home/user_name/jira_google_chat_sla_alert/bot.sh
 ```
 
 - Pronto !
