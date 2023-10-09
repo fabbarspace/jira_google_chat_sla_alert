@@ -1,15 +1,15 @@
-/* SEKIRO - SLA BOT */
+/* SLA BOT */
 
 //Webhook criado no grupo do hangout
-const webhookURL = 'https://chat.googleapis.com/v1/spaces/AAAAb21V7bc/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=zLEsFddu18maBSMXmry1_YVw3_gL73HQj764KEZ1HQc%3D';
+const webhookURL = 'URL';
 const fetch = require('node-fetch');
 const date = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo'});
-const jiraAPI = 'https://bmsixcloud.atlassian.net/rest/api/3/search';
-const jiraAuthorization = 'bm9jLmJvdEBibXNpeC5jb206ZFFhM3FDWlBlZmVoU3BuZWl1Y3MyREIw';
+const jiraAPI = 'https://org_name.atlassian.net/rest/api/3/search';
+const jiraAuthorization = 'token';
 
 //Define a busca para SLA de Primeira Resposta
 const jiraSearchFirstResponse = `{
-  "jql": "project = SEAD \
+  "jql": "project = project_name \
   AND resolution = Unresolved \
   AND issuetype in (Incident, 'Service Request', 'Service Request with Approvals') \
   AND status in (Escalated, 'In Progress', Open, Pending, 'Under investigation', 'Waiting for support', 'Work in progress') \
@@ -28,7 +28,7 @@ searchSLA(jiraSearchFirstResponse, `Alerta SLA de Primeira Resposta`)
 
 //Define a busca para SLA de Resolucao
 const jiraSearchResolution = `{
-  "jql": "project = SEAD \
+  "jql": "project = project_name \
   AND resolution = Unresolved \
   AND issuetype in (Incident, 'Service Request', 'Service Request with Approvals') \
   AND status in (Escalated, 'In Progress', Open, Pending, 'Under investigation', 'Waiting for support', 'Work in progress') \
@@ -61,7 +61,7 @@ fetch(jiraAPI, {
     //console.log('Output: ', out);
     const issues = out.issues
     for (var i = 0; i < issues.length; i++){
-      const mensagem = JSON.stringify({'text': `${date} - [${slaType}] - [CHAMADO]: ${issues[i].key} [ASSUNTO]: ${issues[i]['fields']['summary']} [LINK]: https://bmsixcloud.atlassian.net/jira/servicedesk/projects/SEAD/queues/custom/1/${issues[i].key} `,});
+      const mensagem = JSON.stringify({'text': `${date} - [${slaType}] - [CHAMADO]: ${issues[i].key} [ASSUNTO]: ${issues[i]['fields']['summary']} [LINK]: https://org_name.atlassian.net/jira/servicedesk/projects/project_name/queues/custom/1/${issues[i].key} `,});
       console.log(mensagem)
       postChatMessage(mensagem)
 } 
