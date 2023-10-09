@@ -28,9 +28,9 @@ $ npm install node-fetch --save
 ### Como configurar no servidor ubuntu para rodar automaticamente
 - Não se esqueça que a instalação e configuração de dependências deve ser feita no servidor também. O caminho dentro do arquivo `bot.sh` deve ser alterado.
 
-- Um token para acesso a API deve ser gerado no Jira e informado no campo `jiraAuthorization` em `sekiro_bot_sla_jira.js` para que a aplicação tenha acesso ao Jira.
+- Um token para acesso a API deve ser gerado no Jira e informado no campo `jiraAuthorization` em `bot_sla_jira.js` para que a aplicação tenha acesso ao Jira.
 
-- Para que o programa rode a cada x minutos, vamos usar o arquivo `bot.sh`, esse arquivo chama o programa `sekiro_bot_sla_jira.js` que faz a checagem de SLA. Dessa forma fica mais fácil incluir o arquivo `.sh` no crontab do Ubuntu. Ele também vai gerar um arquivo de log local.
+- Para que o programa rode a cada x minutos, vamos usar o arquivo `bot.sh`, esse arquivo chama o programa `bot_sla_jira.js` que faz a checagem de SLA. Dessa forma fica mais fácil incluir o arquivo `.sh` no crontab do Ubuntu. Ele também vai gerar um arquivo de log local.
 
 - No crontab do Ubuntu, editamos com o seguinte comando
 ```sh
