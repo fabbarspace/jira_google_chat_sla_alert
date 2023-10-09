@@ -14,7 +14,6 @@ Este projeto tem como objetivo a construção de um BOT que verifica os SLA de P
 
 - clone o repositório seguindo os comandos abaixo ou baixe o pacote da aplicação dentro de uma pasta com o nome `jira_google_chat_sla_alert`, anote o caminho para depois referenciar dentro do arquivo `bot.sh`
 ```sh
-$ cd workspace
 $ git clone //URL do Repositorio
 $ cd jira_google_chat_sla_alert
 ```
